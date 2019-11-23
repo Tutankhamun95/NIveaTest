@@ -105,7 +105,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 					</form>
 				</div>
 				<!-- User -->
-				<div class="user"><a href="#"><div><?= $this->Html->image('user.svg', ['alt' => ''])?><div>1</div></div></a></div>
+				<div class="user"><a href="#" data-toggle="modal" data-target="#myModal"><div><?= $this->Html->image('user.svg', ['alt' => ''])?><div>1</div></div></a></div>
 				<!-- Cart -->
 				<div class="cart"><a href="cart.html"><div><?= $this->Html->image('cart.svg', ['alt' => ''])?></div></a></div>
 				<!-- Phone -->
@@ -405,7 +405,51 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 
 
     </div>
+    <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
     
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Login</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Register</a>
+            </li>
+        </ul>
+        </div>
+        <div class="modal-body">
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+            <fieldset>
+                    <?= $this->Form->create() ?>
+                    <?= $this->Form->control('email') ?>
+                    <?= $this->Form->control('password') ?>
+                    <?= $this->Form->button('Login') ?>
+                    <?= $this->Form->end() ?>
+            </fieldset>
+            </div>
+            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+            <fieldset>
+                    <?php
+                        echo $this->Form->control('email');
+                        echo $this->Form->control('password');
+                    ?>
+            </fieldset>
+            <?= $this->Form->button(__('Submit')) ?>
+            <?= $this->Form->end() ?>
+            </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>   
 
 </div> 
     
