@@ -83,10 +83,10 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                 <div class="header_overlay"></div>
                 <div class="header_content d-flex flex-row align-items-center justify-content-start">
                     <div class="logo">
-                        <a href="#">
+                        <a href="#" style="text-decoration: none;">
                             <div class="d-flex flex-row align-items-center justify-content-start">
-                                <div><?= $this->Html->image('logo_1.png', ['alt' => ''])?></div>
-                                <div>Little Closet</div>
+                                <div><?= $this->Html->image('logo.png', ['alt' => ''])?></div>
+                                <div>Nivea Contest</div>
                             </div>
                         </a>	
                     </div>
@@ -445,13 +445,13 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                                         <div class="footer_title">Support</div>
                                         <ul class="footer_list">
                                             <li>
-                                                <a href="#"><div>Customer Service<div class="footer_tag_1">online now</div></div></a>
+                                                <a href="#"><div>Customer Service</div></a>
                                             </li>
                                             <li>
                                                 <a href="#"><div>Return Policy</div></a>
                                             </li>
                                             <li>
-                                                <a href="#"><div>Size Guide<div class="footer_tag_2">recommended</div></div></a>
+                                                <a href="#"><div>Size Guide</div></a>
                                             </li>
                                             <li>
                                                 <a href="#"><div>Terms and Conditions</div></a>
@@ -470,7 +470,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                                         <div class="newsletter">
                                             <form action="#" id="newsletter_form" class="newsletter_form">
                                                 <input type="email" class="newsletter_input" placeholder="Subscribe to our Newsletter" required="required">
-                                                <button class="newsletter_button">+</button>
+                                                
                                             </form>
                                         </div>
                                         <div class="footer_social">
