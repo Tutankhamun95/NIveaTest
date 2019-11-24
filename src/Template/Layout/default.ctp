@@ -48,8 +48,8 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <!-- Navigation -->
     <div class="menu_nav">
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="products.html">Products</a></li>
+            <li><?= $this->Html->link(__('Home'), ['controller' => 'Articles', 'action' => 'index']) ?></li>
+            <li><?= $this->Html->link(__('Products'), ['controller' => 'Articles', 'action' => 'index']) ?></li>
             
         </ul>
     </div>
@@ -112,6 +112,17 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                         <div class="user"><a href="#" data-toggle="modal" data-target="#myModal"><div><?= $this->Html->image('user.svg', ['alt' => ''])?><div>1</div></div></a></div>
                         <!-- Cart -->
                         <div class="cart"><a href="cart.html"><div><?= $this->Html->image('cart.svg', ['alt' => ''])?></div></a></div>
+                        <div>
+<?php
+if($this->Session->read('Auth')) {
+   // user is logged in, show logout..user menu etc
+   echo $this->Html->link('Logout', array('controller' => 'users', 'action' => 'logout')); 
+} else {
+   // the user is not logged in
+   echo $this->Html->link('Login', array('controller' => 'users', 'action' => 'login')); 
+}
+?>
+</div>
                     </div>
                 </div>
             </header>
@@ -538,13 +549,12 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                                     </div>
                                     <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
                                     <fieldset>
-                                        <?php
-                                            echo $this->Form->control('email');
-                                            echo $this->Form->control('password');
-                                        ?>
+                                    <?= $this->Form->create($user) ?>
+                                    <?= $this->Form->control('email')?>
+                                    <?= $this->Form->control('password')?>
+                                    <?= $this->Form->button(__('Submit')) ?>
+                                    <?= $this->Form->end() ?>
                                     </fieldset>
-                                        <?= $this->Form->button(__('Submit')) ?>
-                                        <?= $this->Form->end() ?>
                                     </div>
                                 </div>
                                 </div>

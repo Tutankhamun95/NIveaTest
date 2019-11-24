@@ -1,47 +1,47 @@
 <!-- File: src/Template/Articles/index.ctp -->
+<?= $this->Html->css('section')?>
 
-<h1>Articles</h1>
-<?= $this->Html->link('Add Article', ['action' => 'add']) ?>
 
-<div class="row"> 
-<?php foreach ($articles as $article): ?>
-<div class="col-xl-4 col-md-6">
 
-						<div class="product">
-                            
-							<div class="product_image"><img src="images/product_1.jpg" alt=""></div>
-							<div class="product_content">
-								<div class="product_info d-flex flex-row align-items-start justify-content-start">
-									<div>
-										<div>
-											<div class="product_name"><?= $this->Html->link($article->title, ['action' => 'view', $article->slug]) ?></div>
-											<div class="product_category"><?= $article->created->format(DATE_RFC850) ?></div>
-										</div>
-									</div>
-									<div class="ml-auto text-right">
-										<div class="rating_r rating_r_4 home_item_rating"><i></i><i></i><i></i><i></i><i></i></div>
-										<div class="product_price text-right">$3<span>.99</span></div>
-									</div>
-								</div>
-								<div class="product_buttons">
-									<div class="text-right d-flex flex-row align-items-start justify-content-start">
-										<div class="product_button product_fav text-center d-flex flex-column align-items-center justify-content-center">
-											<div><div><?= $this->Html->link('Edit', ['action' => 'edit', $article->slug]) ?><div>+</div></div></div>
-										</div>
-										<div class="product_button product_cart text-center d-flex flex-column align-items-center justify-content-center">
-											<div><div><?= $this->Form->postLink(
-                'Delete',
-                ['action' => 'delete', $article->slug],
-                ['confirm' => 'Are you sure?'])
-            ?><div>+</div></div></div>
-										</div>
-									</div>
-								</div>
-                            </div>
-                            
-                        </div>
+
+
+<section id="what-we-do">
+		<div class="container-fluid">
+			<h2 class="section-title mb-2 h1">Nivea Beauty Contest</h2>
+			<p class="text-center text-muted h5">Are you a college student and wish to join Nivea's Beauty Contest?</p>
+			<div class="row mt-5">
+				<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+					<div class="card">
+						<div class="card-block block-1">
+							<h3 class="card-title">Sign Up Now!</h3>
+							<p class="card-text">Sign Up for the Competition Now!</p>
+							
+							<a href="javascript:void();" title="Read more" class="read-more" ><?= $this->Html->link(__('Join!'), ['controller' => 'Contestants', 'action' => 'add']) ?><i class="fa fa-angle-double-right ml-2"></i></a>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+					<div class="card">
+						<div class="card-block block-2">
+							<h3 class="card-title">Products</h3>
+							<p class="card-text">Check out our Products</p>
+							<a href="javascript:void();" title="Read more" class="read-more" ><?= $this->Html->link(__('Products!'), ['controller' => 'Products', 'action' => 'index']) ?><i class="fa fa-angle-double-right ml-2"><i class="fa fa-angle-double-right ml-2"></i></a>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+					<div class="card">
+						<div class="card-block block-3">
+							<h3 class="card-title">Sign Up/Login</h3>
+							<p class="card-text">Sign Up or Login to enjoy our latest deals and products</p>
+							<a href="javascript:void();" title="Read more" class="read-more" ><?= $this->Html->link(__('Sign Up'), ['controller' => 'Users', 'action' => 'add']) ?><i class="fa fa-angle-double-right ml-2"><i class="fa fa-angle-double-right ml-2"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>	
+	</section>
+	<!-- /Services section -->
                         
-                    </div>              
-                    <?php endforeach; ?>
-                                            </div>
+                    
                     

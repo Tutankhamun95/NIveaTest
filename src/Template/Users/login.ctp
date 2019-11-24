@@ -1,3 +1,5 @@
+<h2 style="text-align: center;">Login</h2>
+<h2 style="text-align: center;"><?= $this->Html->link(__('Sign Up'), ['controller' => 'Users', 'action' => 'add']) ?></h2>
 <form method="post">
 <?= $this->Form->create() ?>
   
