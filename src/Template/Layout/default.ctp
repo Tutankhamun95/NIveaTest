@@ -14,6 +14,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
   
     <?= $this->Html->css('main_styles')?>
     <?= $this->Html->css('responsive')?>
+    <?= $this->Html->css('login')?>
     <?= $this->Html->css('bootstrap-4.1.2/bootstrap.min')?>
 
     <?= $this->Html->css('plugins/font-awesome-4.7.0/css/font-awesome.min')?>
@@ -27,8 +28,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 
     <?= $this->Html->meta('icon') ?>
 
-    <?= $this->Html->css('base.css') ?>
-    <?= $this->Html->css('style.css') ?>
+
 
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
@@ -112,11 +112,6 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                         <div class="user"><a href="#" data-toggle="modal" data-target="#myModal"><div><?= $this->Html->image('user.svg', ['alt' => ''])?><div>1</div></div></a></div>
                         <!-- Cart -->
                         <div class="cart"><a href="cart.html"><div><?= $this->Html->image('cart.svg', ['alt' => ''])?></div></a></div>
-                        <!-- Phone -->
-                        <div class="header_phone d-flex flex-row align-items-center justify-content-start">
-                            <div><div><?= $this->Html->image('phone.svg', ['alt' => ''])?></div></div>
-                            <div>+1 912-252-7350</div>
-                        </div>
                     </div>
                 </div>
             </header>
@@ -138,7 +133,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                             
                             <!-- Slide -->
                             <div class="owl-item">
-                                <div class="background_image"><?= $this->Html->image('home.jpg', ['alt' => ''])?></div>
+                            <div class="background_image"></div>
                                 <div class="container fill_height">
                                     <div class="row fill_height">
                                         <div class="col fill_height">
@@ -418,6 +413,8 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                     <?= $this->fetch('content') ?>
                 </div>
 
+                
+
 
                 <!-- Footer -->
                 <footer class="footer">
@@ -431,7 +428,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                                         <div class="footer_logo">
                                             <a href="#">
                                                 <div class="d-flex flex-row align-items-center justify-content-start">
-                                                    <div class="footer_logo_icon"><img src="images/logo_2.png" alt=""></div>
+                                                    <div class="footer_logo_icon"><?= $this->Html->image('logo_2.png', ['alt' => ''])?></div>
                                                     <div>Little Closet</div>
                                                 </div>
                                             </a>		

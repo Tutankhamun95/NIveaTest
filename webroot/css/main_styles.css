@@ -302,6 +302,7 @@ section
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center center;
+	background-image:url(../img/home.jpg);
 }
 .nopadding
 {
