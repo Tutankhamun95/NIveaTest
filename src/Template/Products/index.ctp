@@ -10,13 +10,13 @@
                     'url' => ['controller' => 'Products', 'action' => 'view', $product->slug]
                 ]);?>
 
-            <div class="caption" style="text-align: center;">
+            <div class="caption">
                 <h5>
                 <small><?= $product->name ?></small>
                 </h5>
                 <h5>
                     Price: RM
-                    <small style="text-align: center;"><?= $product->price ?></small>
+                    <small><?= $product->price ?></small>
                 </h5>
             </div>
         </div>
