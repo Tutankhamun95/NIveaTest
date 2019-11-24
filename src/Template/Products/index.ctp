@@ -15,7 +15,7 @@
                 <small><?= $product->name ?></small>
                 </h5>
                 <h5>
-                    Price: $
+                    Price: RM
                     <small><?= $product->price ?></small>
                 </h5>
             </div>

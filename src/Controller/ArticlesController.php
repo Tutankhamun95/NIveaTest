@@ -32,22 +32,22 @@ class ArticlesController extends AppController
 
 
     public function add()
-{
-    $article = $this->Articles->newEntity();
-    if ($this->request->is('post')) {
-        $article = $this->Articles->patchEntity($article, $this->request->getData());
+    {
+        $article = $this->Articles->newEntity();
+        if ($this->request->is('post')) {
+            $article = $this->Articles->patchEntity($article, $this->request->getData());
 
-        // Changed: Set the user_id from the session.
-        $article->user_id = $this->Auth->user('id');
+            // Changed: Set the user_id from the session.
+            $article->user_id = $this->Auth->user('id');
 
-        if ($this->Articles->save($article)) {
-            $this->Flash->success(__('Your article has been saved.'));
-            return $this->redirect(['action' => 'index']);
+            if ($this->Articles->save($article)) {
+                $this->Flash->success(__('Your article has been saved.'));
+                return $this->redirect(['action' => 'index']);
+            }
+            $this->Flash->error(__('Unable to add your article.'));
         }
-        $this->Flash->error(__('Unable to add your article.'));
+        $this->set('article', $article);
     }
-    $this->set('article', $article);
-}
 
 
 public function edit($slug)

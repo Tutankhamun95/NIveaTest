@@ -14,12 +14,12 @@
         <?= $product->name ?>
         </h1>
         <h2>
-            Price: $
+            Price: RM
             <?= $product->price ?>
         </h2>
         <p>
             <?= $this->Form->create('Cart',array('id'=>'add-form','url'=>array('controller'=>'carts','action'=>'add')));?>
-            <?= $this->Form->hidden('product_id',array('value'=>$product['Product']['id']))?>
+            <?= $this->Form->hidden('product_id',array('value'=>$product->id))?>
             <?= $this->Form->submit('Add to cart',array('class'=>'btn-success btn btn-lg'));?>
             <?= $this->Form->end();?>
         </p>

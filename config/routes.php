@@ -63,11 +63,11 @@ Router::scope('/', function (RouteBuilder $routes) {
      * to use (in this case, src/Template/Pages/home.ctp)...
      */
     Router::scope('/', function (RouteBuilder $routes) {
-        $routes->connect('/', ['controller' => 'Articles', 'action' => 'index']);
+        $routes->connect('/', ['controller' => 'Products', 'action' => 'index']);
     });
     
     // Using the static method.
-    Router::connect('/', ['controller' => 'Articles', 'action' => 'index']);
+    Router::connect('/', ['controller' => 'Products', 'action' => 'index']);
 
     /**
      * Connect catchall routes for all controllers.
